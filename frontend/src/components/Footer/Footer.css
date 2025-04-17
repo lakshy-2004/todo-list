@@ -1,0 +1,31 @@
+
+/* Footer Container */
+.footer {
+    background-color: #e6c4f5; /* Softer pastel shade */
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Footer Text */
+.footer p {
+    margin: 0;
+    padding: 5px;
+    color: #555;
+    font-size: 14px;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 14px;
+    }
+
+    .footer .social-icons a {
+        font-size: 18px;
+    }
+}

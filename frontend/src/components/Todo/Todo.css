@@ -1,0 +1,235 @@
+/* .todo{
+    width: 100%;
+    min-height: 100vh;
+    max-height: auto;
+    position: relative;
+}
+.todo-inputs{
+    border: none;
+    outline: none;
+}
+.todo-inputs-div{
+    border-radius: 10px;
+    box-shadow: rgba(0 , 0 , 0, 0.35)0px 5px 15px;
+    width: 50%;
+}
+#textarea{
+    display: none;
+}
+.home-btn-div{
+    width: 50%;
+}
+
+.todo-card{
+    border: 1px solid black;
+}
+.todo-card-p{
+    text-align: justify;
+    text-justify: inter-word;
+}
+.card-icons{
+    font-size: 18px;
+    cursor: pointer;
+}
+.del{
+    color: red;
+}
+.card-icon-head{
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.card-icon-head:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.todo-update{
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    background-color: pink;
+    display: none;
+}
+.update{
+    height: 100%;
+}
+
+@media (max-width: 576px) {  
+    .todo-inputs-div {
+      width: 100%;
+    }
+    .home-btn-div{
+        width: 100%;
+    }
+}
+   */
+
+
+   /* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Apply font to the entire app */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+}
+
+/* General Todo Container */
+.todo {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+/* Input Styles */
+.todo-inputs {
+    border: none;
+    outline: none;
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.todo-inputs-div {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 10px;
+    width: 50%;
+    padding: 15px;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+/* Hide textarea initially */
+#textarea {
+    display: none;
+}
+
+/* Home Button Div */
+.home-btn-div {
+    width: 50%;
+    text-align: center;
+}
+
+/* Todo Cards */
+.todo-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px;
+    padding: 15px;
+    margin: 15px 0;
+    transition: transform 0.2s ease-in-out;
+    border-left: 5px solid #4CAF50;
+}
+
+.todo-card:hover {
+    transform: translateY(-5px);
+}
+
+.todo-card-p {
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Card Icons */
+.card-icons {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-icons:hover {
+    transform: scale(1.1);
+}
+
+.del {
+    color: #d9534f;
+}
+
+.card-icon-head {
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.card-icon-head:hover {
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 6px;
+}
+
+/* Todo Update Form */
+.todo-update {
+    width: 100%;
+    height: 80vh;
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    background-color: rgba(255, 192, 203, 0.9);
+    display: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
+}
+
+.update {
+    height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .todo-inputs-div,
+    .home-btn-div {
+        width: 80%;
+    }
+}
+
+@media (max-width: 576px) {
+    .todo-inputs-div,
+    .home-btn-div {
+        width: 100%;
+    }
+}
+
+/* Home Button Styling */
+.home-btn {
+    border: none;
+    outline: none;
+    background-color: rgba(255, 0, 0, 0.836);
+    border-radius: 5px;
+    color: white !important;
+    font-weight: bold;
+    padding: 10px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.home-btn:hover {
+    background-color: rgba(200, 0, 0, 0.9);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Focus Effect (For Keyboard Navigation) */
+.home-btn:focus {
+    outline: 3px solid rgba(255, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+}
+
+/* Active Effect (When Clicked) */
+.home-btn:active {
+    transform: scale(0.95);
+    background-color: rgba(170, 0, 0, 0.9);
+}

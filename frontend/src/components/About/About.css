@@ -1,0 +1,71 @@
+
+/* About Page Container */
+.about {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    background: #f9f9f9; /* Light Background */
+    color: #333;
+    text-align: center;
+}
+
+/* About Page Heading */
+.about h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgba(240, 0, 0, 0.87);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+/* Animated Underline Effect */
+.about h1::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: rgba(240, 0, 0, 0.87);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Underline Animation on Hover */
+.about h1:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Paragraph Styling */
+.about p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-top: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: #555;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about {
+        padding: 20px;
+    }
+
+    .about h1 {
+        font-size: 28px;
+    }
+
+    .about p {
+        font-size: 16px;
+    }
+}

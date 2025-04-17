@@ -1,0 +1,88 @@
+
+/* Navbar Styling */
+.navbar {
+    background-color: #fff;
+    padding: 12px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar Branding */
+.navbar-brand {
+    color: rgba(255, 0, 0, 0.9);
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: rgba(200, 0, 0, 1);
+}
+
+/* User Profile Image */
+.user-png {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 0, 0, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.user-png:hover {
+    transform: scale(1.1);
+}
+
+/* Navbar Button */
+.btn-nav {
+    background-color: rgba(255, 0, 0, 0.9);
+    border-radius: 8px;
+    color: white !important;
+    font-weight: bold;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.btn-nav:hover {
+    background-color: rgba(200, 0, 0, 1);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5);
+}
+
+/* Focus Effect (For Keyboard Navigation) */
+.btn-nav:focus {
+    outline: 3px solid rgba(255, 0, 0, 0.6);
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+}
+
+/* Active Effect (When Clicked) */
+.btn-nav:active {
+    transform: scale(0.95);
+    background-color: rgba(170, 0, 0, 0.9);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .btn-nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
